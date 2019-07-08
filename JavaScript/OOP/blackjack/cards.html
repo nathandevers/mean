@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Deck</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="cards.js"></script>
+    <link rel="stylesheet" href="blackjack/style.css">
+    <style>
+        *{
+            background-color: green;
+
+        }
+        body{
+            margin: 0 auto;
+            margin-left:  35vw;
+            margin-top: 20vh;
+            width: 40vw;
+            border: 2px solid black;
+        }
+        button{
+            background-color: black;
+            color: white;
+        }
+        button{
+            margin: 5px;
+            height: 30px;
+            width: 60px;
+        }
+        #base{
+            margin-left: 30px;
+            padding-left: 5px;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="base">
+        <div id="dealer">
+        <h1>Dealer's Cards:</h1>
+        <h3 id="dscore">Score:</h3>
+        <img id="hiddencard" src="cards-png/b2fv.png" alt="">
+
+        </div>
+        <div id="player">
+        <h1 id="playername"></h1>
+        <h3 id="pscore"></h3>
+        </div>
+        <div id="options">
+        <button id="hit">Hit</button>
+        <button id="stay">Stay</button>
+        </div>
+
+    </div>
+
+  </body>
+</html>
