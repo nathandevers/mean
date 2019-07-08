@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ninja to cat assignment</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        $(document).ready(function() {
+            $('img').hover(function() {
+                // hover in
+                var temp = $(this).attr('src');
+                $(this).attr('src', $(this).attr('data-alternate'));
+                $(this).attr('data-alternate', temp);
+            }, function() {
+                // hover out
+                var temp = $(this).attr('src');
+                $(this).attr('src', $(this).attr('data-alternate'));
+                $(this).attr('data-alternate', temp);
+            });
+
+
+            // $('img').click(function() {
+            //     var temp = $(this).attr('src');
+            //     $(this).attr('src', $(this).attr('data-alternate'));
+            //     $(this).attr('data-alternate', temp);
+            // })
+        })
+    </script>
+</head>
+<body>
+    <div id="container">
+        <img src="img/ninja0.png" alt="img" data-alternate="img/cat0.png">
+        <img src="img/ninja1.png" alt="img" data-alternate="img/cat1.png">
+        <img src="img/ninja2.png" alt="img" data-alternate="img/cat2.png">
+        <img src="img/ninja3.png" alt="img" data-alternate="img/cat3.png">
+        <img src="img/ninja4.png" alt="img" data-alternate="img/cat4.png">
+    </div>
+    
+</body>
+</html>

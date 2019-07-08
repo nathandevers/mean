@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<head>
+    <title>HoverInOut</title>
+    <meta charset="UTF-8">
+    <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $( ".grid-container img" ).hover(function() {
+            $( this ).fadeOut("data-alt-src");
+            $(this).fadeIn(".ninja");
+            });
+        });
+    </script>
+    <style>
+        *{
+            margin: 0 auto;
+            width: 500px;
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: auto auto;
+            padding-top: 50px;
+        }
+
+        img{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+   <div class="grid-container">
+<img src="ninja1.jpg" class="ninja" data-alt-src="cat.jpeg">
+<img src="ninja2.png" class="ninja" data-alt-src="cat.jpeg">
+<img src="ninja3.jpg" class="ninja" data-alt-src="cat.jpeg">
+<img src="ninja4.png" class="ninja" data-alt-src="cat.jpeg">
+   </div>
+</body>
+</html>

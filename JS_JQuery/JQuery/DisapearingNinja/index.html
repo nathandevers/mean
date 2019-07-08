@@ -1,0 +1,58 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ninja</title>
+    <style>
+        body{
+            margin: 0 auto;
+            width: 900px;
+        }
+        img{
+            width: 200px;
+           
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            
+        }
+
+        button{
+            margin-left: 400px;
+            padding: 10px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('img').click(function () {
+                $(this).hide();
+            });
+            $('button').click(function(){
+                $('img').show();
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <img src="ninja.jpg" alt="ninja">
+        <img src="ninja.jpg" alt="ninja">
+        <img src="ninja.jpg" alt="ninja">
+        <img src="ninja.jpg" alt="ninja">
+        <img src="ninja.jpg" alt="ninja">
+        <img src="ninja.jpg" alt="ninja">
+        <img src="ninja.jpg" alt="ninja">
+        <img src="ninja.jpg" alt="ninja">
+    </div>
+    <button>Restore</button>
+
+
+</body>
+
+</html>

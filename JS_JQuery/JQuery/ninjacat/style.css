@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    padding-top: 100px;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+img {
+    margin: 0 auto;
+    width: 181px;
+    display: block;
+}
