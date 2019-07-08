@@ -1,0 +1,22 @@
+div{
+    padding-left: 5%;
+    
+}
+td {
+    width: 300px;
+    height: 10vh; 
+    overflow: scroll;
+}
+
+span{
+    font-weight: bolder;
+}
+
+a:hover{
+    color: red;
+}
+
+.first{
+    padding-left: 9em;
+}
+
