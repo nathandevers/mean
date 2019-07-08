@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .block{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            height: 200px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        #guess{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[value="Guess"]{
+            width: 50%;
+            margin-top: 5px;
+        }
+
+        .red{
+            background-color: red;
+        }
+
+        .green{
+            background-color: green;
+        }
+
+        #hidden{
+            display: none;
+        }
+
+        #show{
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+	<div id="main">
+		<h1>Welcome to the Great Number Game!</h1>
+		<h2>I am thinking of a number between 1 and 100.</h2>
+		<h2>Take a guess!</h2>
+
+		<div class="<%=context.status %>">
+			<%=context.msg %>
+			<form id="<%=context.showForm %>" method="post" action="reset">
+				<input type="submit" value="Reset">
+			</form>
+		</div>
+
+		<form id="guess" method="post" action="guess">
+			<input type="test" name="aGuess">
+			<input type="submit" value="Guess">
+		</form>
+	</div>
+</body>
+</html>

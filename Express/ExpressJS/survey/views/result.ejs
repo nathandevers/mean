@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        div{
+            padding: 10px;
+            border: 1px solid black;
+            display: inline-block;
+            margin-left: 40vw;
+            margin-top: 10vh;
+        }
+        textarea{
+            resize: none;
+            overflow: scroll;
+        }
+        h1{
+            text-align: center;
+        }
+        .submit{
+            background-color: dodgerblue;
+            color: whitesmoke;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Submitted Information</h1>
+        <p>Name: <%= name %></p>
+        <p>Dojo: <%= dojo %></p>
+        <p>Language: <%= language %></p>
+        <p>Comment: <%= comment %></p>
+        <form action="/"> <input type="submit" value="Back"></form>
+    </div>
+</body>
+</html>

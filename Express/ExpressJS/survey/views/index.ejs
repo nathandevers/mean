@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        div{
+            padding: 10px;
+            border: 1px solid black;
+            display: inline-block;
+            margin-left: 40vw;
+            margin-top: 10vh;
+        }
+        textarea{
+            resize: none;
+            overflow: scroll;
+        }
+        h1{
+            text-align: center;
+        }
+        .submit{
+            background-color: dodgerblue;
+            color: whitesmoke;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Sign Up!</h1> 
+        <form action="/result" method="POST">
+            <p>Your name <input type="text" name="name"></p>
+            <p>Dojo Location
+                  <select name="dojo">
+                    <option value="Burbank">Burbank</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="Chicago">Chicago</option>
+                </select>
+            </p>
+            <p>Favorite Language
+                    <select name="language">
+                      <option value="Python">Python</option>
+                      <option value="JavaScript">JavaScript</option>
+                      <option value="Java">Java</option>
+                  </select>
+              </p>
+              <p>Additional Comments (optional):</p>
+              <textarea name="comment" id="" cols="30" rows="10"></textarea>
+              <br>
+              <input type="submit" value="Submit" class="submit">
+        </form>
+    </div>
+    
+
+</body>
+</html>

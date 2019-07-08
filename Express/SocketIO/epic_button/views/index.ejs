@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var socket = io.connect();
+            $('#btn').click(function(){
+                socket.emit("button_click")
+            });
+            $('#reset').click(function(){
+                socket.emit("reset")
+            });
+            socket.on('update_count', function(data){
+                $('#count').html(data.count);
+            })
+        });
+    </script>
+    <style>
+        #btn{
+            background-color: dodgerblue;
+            color: white;
+            font-size: 20px;
+        }
+        #reset{
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+	<h1>The button has been pushed <span id="count">0</span> time(s)</h1>
+	<p>Push the button to update the count!</p>
+	<button id="btn" style="width: 300px; height: 100px; margin-bottom: 20px;">PUSH THE EPIC BUTTON</button><br>
+	<button style="vertical-align" id="reset">Reset count</button>
+</body>
+
+</html>
