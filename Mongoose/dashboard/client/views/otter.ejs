@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%=otter.name %></title>
+</head>
+<body>
+<ul>
+	<li>Name: <%=otter.name %></li>
+	<li>Age: <%=otter.age %></li>
+</ul>
+<a href="/otters/edit/<%=otter._id %>">Edit Otter</a>
+<form action="/otters/delete/<%=otter._id%>" method="post"><input type="submit" value="Delete"></input></form>
+</body>
+</html>
